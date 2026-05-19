@@ -2,9 +2,8 @@
 # ミニユーザーAPIフロントエンド / 미니 사용자 API 프론트엔드
 
 A full-stack authentication dashboard built with React, TypeScript, FastAPI, PostgreSQL, and JWT authentication.
-
-# React・TypeScript・FastAPI・PostgreSQL・JWT認証を使用して構築したフルスタック認証ダッシュボードです。
-# React, TypeScript, FastAPI, PostgreSQL 및 JWT 인증을 사용하여 구축한 풀스택 인증 대시보드입니다.
+React・TypeScript・FastAPI・PostgreSQL・JWT認証を使用して構築したフルスタック認証ダッシュボードです。
+React, TypeScript, FastAPI, PostgreSQL 및 JWT 인증을 사용하여 구축한 풀스택 인증 대시보드입니다.
 
 ---
 
