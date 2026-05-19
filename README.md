@@ -44,22 +44,32 @@ A full-stack authentication dashboard built with React, TypeScript, FastAPI, Pos
 
 ---
 
-# Authentication Flow / 認証フロー/ 인증 흐름
+## Screenshots
 
-1. User logs in  
-   ユーザーがログイン / 사용자가 로그인
+<p float="left">
+  <img src="./login_screenshot.png" width="32%" />
+  <img src="./dashboard_screenshot.png" width="32%" />
+  <img src="./admin_screenshot.png" width="32%" />
+</p>
+
+---
+
+# Authentication Flow / 認証フロー / 인증 흐름
+
+1. Login request sent  
+   ログイン要求送信 / 로그인 요청 전송
 
 2. Backend validates credentials  
-   バックエンドが認証情報を確認 / 백엔드가 인증 정보를 검증
+   認証情報確認 / 사용자 인증 확인
 
-3. JWT token is generated  
-   JWTトークンを生成 / JWT 토큰 생성
+3. JWT token generated  
+   JWT生成 / JWT 생성
 
 4. Token stored in localStorage  
-   localStorageへ保存 / localStorage에 저장
+   localStorage保存 / localStorage 저장
 
-5. Protected dashboard is unlocked  
-   保護されたダッシュボードへアクセス / 보호된 대시보드 접근
+5. Protected dashboard unlocked  
+   保護ページアクセス / 보호된 페이지 접근
 
 ---
 

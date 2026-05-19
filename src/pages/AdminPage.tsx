@@ -1,41 +1,100 @@
-import { useEffect, useState } from "react";
+import {
+  useState,
+  useEffect
+} from "react";
+
 import Navbar from "../components/NavBar";
 
 function AdminPage() {
-  const [message, setMessage] = useState("");
 
-  useEffect(() => {
-    async function checkAdmin() {
-      const token = localStorage.getItem("token");
+  const [users, setUsers] =
+    useState<any[]>([]);
 
-      if (!token) {
-        window.location.href = "/";
-        return;
-      }
+  async function getUsers() {
 
-      const response = await fetch("http://127.0.0.1:8002/admin", {
+    const token =
+      localStorage.getItem("token");
+
+    const response = await fetch(
+      "http://127.0.0.1:8002/users",
+      {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-      });
-
-      if (response.status === 403) {
-        window.location.href = "/dashboard";
-        return;
       }
+    );
 
-      const data = await response.json();
-      setMessage(data.message);
+    const data =
+      await response.json();
+
+    setUsers(data.users);
+  }
+
+  function logoutUser() {
+
+    localStorage.removeItem("token");
+
+    window.location.href = "/";
+  }
+
+  useEffect(() => {
+
+    const token =
+      localStorage.getItem("token");
+
+    if (!token) {
+
+      window.location.href = "/";
     }
 
-    checkAdmin();
   }, []);
 
   return (
+
     <div className="container">
+
       <Navbar />
+
       <h1>Admin Page</h1>
-      <p>{message}</p>
+
+      <p>
+        You have administrator access.
+      </p>
+
+      <button onClick={getUsers}>
+        Load Users
+      </button>
+
+      <button onClick={logoutUser}>
+        Logout
+      </button>
+
+      <br />
+      <br />
+
+      {users.map((user) => (
+
+        <div
+          key={user.id}
+          className="user-card"
+        >
+
+          <h3>
+            {user.username || "Unknown User"}
+          </h3>
+
+          <p>
+            ID: {user.id}
+          </p>
+
+          <p>
+            Role: {user.role || "user"}
+          </p>
+
+        </div>
+
+      ))}
+
     </div>
   );
 }

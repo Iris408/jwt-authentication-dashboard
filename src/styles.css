@@ -50,13 +50,13 @@ input {
     border-radius: 8px;
     padding: 12px;
     margin-top: 12px;
-    width: 100%;
+    width: 20%;
 }
 
 .navbar {
     display: flex;
     gap: 20px;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
 }
 
 .navbar a {
