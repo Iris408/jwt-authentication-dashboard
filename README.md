@@ -10,37 +10,16 @@ A full-stack authentication dashboard built with React, TypeScript, FastAPI, Pos
 
 # Features / 機能 / 주요 기능
 
-- JWT Authentication  
-  JWT認証  
-  JWT 인증
-
-- Protected Dashboard Routes  
-  保護されたダッシュボードルート  
-  보호된 대시보드 라우트
-
-- User Login System  
-  ユーザーログインシステム  
-  사용자 로그인 시스템
-
-- Admin Dashboard  
-  管理者ダッシュボード  
-  관리자 대시보드
-
-- User Management  
-  ユーザー管理  
-  사용자 관리
-
-- API Integration  
-  API統合  
-  API 통합
-
-- React State Management  
-  React状態管理  
-  React 상태 관리
-
-- Multi-Page Frontend Structure  
-  マルチページフロントエンド構成  
-  멀티 페이지 프론트엔드 구조
+| English | 日本語 | 한국어 |
+|---|---|---|
+| JWT Authentication | JWT認証 | JWT 인증 |
+| Protected Routes | 保護ルート | 보호 라우트 |
+| Admin Dashboard | 管理者ダッシュボード | 관리자 대시보드 |
+| User Management | ユーザー管理 | 사용자 관리 |
+| API Integration | API統合 | API 통합 |
+| React State Management | React状態管理 | React 상태 관리 |
+| Multi-Page Frontend | マルチページ構成 | 멀티 페이지 구조 |
+| Responsive UI Styling | レスポンシブUI | 반응형 UI |
 
 ---
 
@@ -86,25 +65,25 @@ A full-stack authentication dashboard built with React, TypeScript, FastAPI, Pos
 
 # Future Improvements/ 今後の改善/ 향후 개선 사항
 
-- Docker containerisation
-- Cloud deployment
-- Refresh tokens
-- Improved responsive design
-- User profile editing
-- Dark/light mode support
+| English | 日本語 | 한국어 |
+|---|---|---|
+| Docker containerisation | Dockerコンテナ化 | Docker 컨테이너화 |
+| Cloud deployment | クラウドデプロイ | 클라우드 배포 |
+| Refresh token support | リフレッシュトークン対応 | 리프레시 토큰 지원 |
+| Improved responsive design | レスポンシブデザイン改善 | 반응형 디자인 개선 |
+| User profile editing | ユーザープロフィール編集 | 사용자 프로필 수정 |
+| Dark/light mode support | ダーク・ライトモード対応 | 다크/라이트 모드 지원 |
 
 ---
 
 # Learning Outcomes/ 学習内容/ 학습 내용
 
-This project helped improve understanding of:
-このプロジェクトを通して以下を学習しました：
-이 프로젝트를 통해 다음 내용을 학습했습니다:
-
-- Frontend/backend integration
-- JWT authentication
-- React hooks
-- REST APIs
-- Protected routes
-- Async API requests
-- Full-stack application structure
+| English | 日本語 | 한국어 |
+|---|---|---|
+| Frontend/backend integration | フロントエンド・バックエンド統合 | 프론트엔드/백엔드 통합 |
+| JWT authentication | JWT認証 | JWT 인증 |
+| REST API communication | REST API通信 | REST API 통신 |
+| React state management | React状態管理 | React 상태 관리 |
+| Protected routes | 保護ルート | 보호 라우트 |
+| Async API requests | 非同期APIリクエスト | 비동기 API 요청 |
+| Full-stack architecture | フルスタック構造 | 풀스택 구조 |
