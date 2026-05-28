@@ -8,7 +8,7 @@ function LoginPage() {
 
   const navigate = useNavigate();
 
-  async function loginUser(event: React.FormEvent) {
+  async function loginUser(event: React.SubmitEvent) {
     event.preventDefault();
 
     const API_URL = import.meta.env.VITE_API_URL;
@@ -27,12 +27,17 @@ function LoginPage() {
 
       const data = await response.json();
 
+      console.log("Login respponse:", data);
+      console.log("Access token:", data.access_token)
+
       if (!response.ok) {
         setErrorMessage(data.detail || "Login failed");
         return;
       }
 
       localStorage.setItem("token", data.access_token);
+
+      console.log("Saved token:", localStorage.getItem("token"));
 
       navigate("/dashboard");
     } catch (error) {
