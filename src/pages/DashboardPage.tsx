@@ -2,24 +2,27 @@ import { useState, useEffect } from "react";
 
 import Navbar from "../components/NavBar";
 
+  type Profile = {
+    id: number;
+    username: string;
+    role?: string;
+  };
+
 function DashboardPage() {
-  const [profile, setProfile] = useState<any>(null);
+
+  const [profile, setProfile] = useState<Profile | null>(null);
+
+  useEffect(() => {
+    let ignore = false;
 
   async function getProfile() {
     const token = localStorage.getItem("token");
-
-    if (!token) {
-      window.location.href = "/";
-      return;
-    }
+    if (!token) { window.location.href = "/"; return; }
 
     const API_URL = import.meta.env.VITE_API_URL;
-
     const response = await fetch(`${API_URL}/profile`, {
       method: "GET",
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
+      headers: { Authorization: `Bearer ${token}` },
     });
 
     if (!response.ok) {
@@ -29,18 +32,17 @@ function DashboardPage() {
     }
 
     const data = await response.json();
-
-    setProfile(data.user);
+    if (!ignore) setProfile(data.user); 
   }
+
+    getProfile();
+    return () => { ignore = true; };
+  }, []);
 
   function logoutUser() {
     localStorage.removeItem("token");
     window.location.href = "/";
   }
-
-  useEffect(() => {
-    getProfile();
-  }, []);
 
   return (
     <div className="container">

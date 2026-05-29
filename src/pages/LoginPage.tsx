@@ -41,6 +41,7 @@ function LoginPage() {
 
       navigate("/dashboard");
     } catch (error) {
+      console.error("Backend API connection failed:", error);
       setErrorMessage("Unable to connect to backend API");
     }
   }

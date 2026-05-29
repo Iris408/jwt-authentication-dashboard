@@ -2,8 +2,14 @@ import { useState, useEffect } from "react";
 
 import Navbar from "../components/NavBar";
 
+type AdminUser = {
+  id: number;
+  username: string;
+  role?: string;
+};
+
 function AdminPage() {
-  const [users, setUsers] = useState<any[]>([]);
+  const [users, setUsers] = useState<AdminUser[]>([]);
 
   async function getUsers() {
     const token = localStorage.getItem("token");
