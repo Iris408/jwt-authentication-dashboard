@@ -44,6 +44,7 @@ https://mini-user-api.onrender.com/docs
 
 # Tech Stack / 技術スタック
 
+| Area | Technologies |
 |---|---|
 | Frontend | React, TypeScript, CSS, Vite, React Router |
 | Backend | FastAPI, PostgreSQL, SQLAlchemy, JWT Authentication |
