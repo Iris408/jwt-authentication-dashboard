@@ -44,12 +44,13 @@ https://mini-user-api.onrender.com/docs
 
 # Tech Stack / 技術スタック
 
-| Area | Technologies |
+| Area / 分野 | Technologies / 技術 |
 |---|---|
-| Frontend | React, TypeScript, CSS, Vite, React Router |
-| Backend | FastAPI, PostgreSQL, SQLAlchemy, JWT Authentication |
-| Deployment | Vercel, Render |
-| Tools | Git, GitHub, GitHub Actions, VS Code |
+| Frontend / フロントエンド | React, TypeScript, Vite, CSS, React Router |
+| Backend API / バックエンドAPI | FastAPI, PostgreSQL, SQLAlchemy, JWT Authentication |
+| Deployment / デプロイ | Vercel, Render |
+| CI/CD | GitHub Actions |
+| Tools / ツール | Git, GitHub, VS Code |
 
 ---
 
