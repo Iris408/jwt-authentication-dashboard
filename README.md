@@ -48,7 +48,7 @@ https://mini-user-api.onrender.com/docs
 | Frontend | React, TypeScript, CSS, Vite, React Router |
 | Backend | FastAPI, PostgreSQL, SQLAlchemy, JWT Authentication |
 | Deployment | Vercel, Render |
-| Tools | Git, GitHub, VS Code |
+| Tools | Git, GitHub, GitHub Actions, VS Code |
 
 ---
 
@@ -77,13 +77,19 @@ https://mini-user-api.onrender.com/docs
 
 ---
 
-## API Routes Used
+## API Endpoints | APIエンドポイント
 
-| Method | Endpoint | Purpose |
+| Method | Endpoint | Description |
 |---|---|---|
-| POST | `/login` | Login and receive JWT token |
-| GET | `/profile` | Get authenticated user profile |
-| GET | `/users` | Admin-only user list |
+| GET | `/` | Home / health check |
+| POST | `/users` | Create a new user |
+| POST | `/login` | Login user with JSON request |
+| POST | `/token` | OAuth2 token login for Swagger authorization |
+| GET | `/profile` | Get protected user profile |
+| GET | `/users` | Get all users — admin only |
+| GET | `/users/{user_id}` | Get one user by ID |
+| PUT | `/users/{user_id}` | Update a user |
+| DELETE | `/users/{user_id}` | Delete a user |
 
 ---
 
@@ -91,11 +97,11 @@ https://mini-user-api.onrender.com/docs
 
 | English | 日本語 |
 |---|---|
-| CI/CD pipeline | CI/CDパイプライン |
+| CI/CD deployment improvements | CI/CDデプロイ改善 |
 | Refresh token support | リフレッシュトークン対応 |
 | Improved mobile styling | モバイル表示の改善 |
 | User profile editing | ユーザープロフィール編集 |
 | Admin role editing | 管理者ロールの編集 |
 | Loading states and error message | 読み込み状態とエラーメッセージ |
-| Frontend tests | フロントエンドのテスト |
 | Dark/light mode support | ダーク・ライトモード対応 |
+| Frontend tests | フロントエンドテスト |
