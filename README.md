@@ -29,7 +29,7 @@ npm run dev
 
 ---
 
-# Live Demo  / ライブデモ
+## Live Demo  / ライブデモ
 
 Frontend deployed on Vercel:
 ```text
@@ -42,7 +42,7 @@ https://mini-user-api.onrender.com/docs
 
 ---
 
-# Tech Stack / 技術スタック
+## Tech Stack / 技術スタック
 
 | Area / 分野 | Technologies / 技術 |
 |---|---|
@@ -54,13 +54,13 @@ https://mini-user-api.onrender.com/docs
 
 ---
 
-# Features / 機能 
+## Features / 機能 
 
 | English | 日本語 |
 |---|---|
 | User login flow | ユーザーログインフロー |
 | Protected dashboard route | 保護されたダッシュボードルート |
-| Admin-only user lsit | 管理者専用ユーザー一覧 |
+| Admin-only user list | 管理者専用ユーザー一覧 |
 | Role-based access control | ロールベースアクセス制御 |
 | API Integration with deployed backend | デプロイ済みバックエンドとのAPI統合 |
 | Multi-Page frontend routing | マルチページフロントエンドルーティング |
@@ -79,23 +79,34 @@ https://mini-user-api.onrender.com/docs
 
 ---
 
-## API Endpoints | APIエンドポイント
+## API Routes Used / 使用APIルート
 
 | Method | Endpoint | Description |
 |---|---|---|
-| GET | `/` | Home / health check |
-| POST | `/users` | Create a new user |
-| POST | `/login` | Login user with JSON request |
-| POST | `/token` | OAuth2 token login for Swagger authorization |
-| GET | `/profile` | Get protected user profile |
+| POST | `/login` | Login and receive JWT token |
+| GET | `/profile` | Get authenticated user profile |
 | GET | `/users` | Get all users — admin only |
-| GET | `/users/{user_id}` | Get one user by ID |
-| PUT | `/users/{user_id}` | Update a user |
-| DELETE | `/users/{user_id}` | Delete a user |
 
 ---
 
-# Future Improvements/ 今後の改善
+## Portfolio Ready v1 / ポートフォリオ準備完了 v1
+
+| Area | Status |
+|---|---|
+| Frontend UI | ✅ Complete |
+| Login flow | ✅ Working |
+| JWT token storage | ✅ Working |
+| Protected dashboard | ✅ Working |
+| Admin-only user list | ✅ Working |
+| Vercel deployment | ✅ Live |
+| Render backend integration | ✅ Connected |
+| GitHub Actions CI | ✅ Passing |
+
+This project is portfolio-ready as a deployed React + TypeScript authentication dashboard connected to a deployed FastAPI backend with protected routes, admin access, role-based user management, and CI checks.
+
+---
+
+## Future Improvements / 今後の改善
 
 | English | 日本語 |
 |---|---|
@@ -104,6 +115,6 @@ https://mini-user-api.onrender.com/docs
 | Improved mobile styling | モバイル表示の改善 |
 | User profile editing | ユーザープロフィール編集 |
 | Admin role editing | 管理者ロールの編集 |
-| Loading states and error message | 読み込み状態とエラーメッセージ |
+| Loading states and error messages | 読み込み状態とエラーメッセージ |
 | Dark/light mode support | ダーク・ライトモード対応 |
 | Frontend tests | フロントエンドテスト |
