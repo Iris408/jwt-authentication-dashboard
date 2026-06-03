@@ -1,16 +1,66 @@
 # JWT Authentication Dashboard
-## JWT認証ダッシュボード
 
 JWT Authentication Dashboard is a React + TypeScript frontend application connected to a deployed FastAPI backend.
-It supports user login, JWT token storage, protected dashboard access, admin-only user list, and role-based UI flows.
+
+It supports user login, JWT token storage, protected dashboard access, admin-only user listing, role-based UI flows, Vercel frontend deployment, Render backend integration, and GitHub Actions CI checks.
+
+# JWT認証ダッシュボード
 
 JWT認証ダッシュボードは、デプロイ済みのFastAPIバックエンドに接続されたReact + TypeScriptフロントエンドアプリケーションです。
-ユーザーログイン、JWTトークンの保存、保護されたダッシュボードアクセス、管理者専用ユーザーリスト、ロールベースのUIフローをサポートしています。
 
----
+ユーザーログイン、JWTトークンの保存、保護されたダッシュボードアクセス、管理者専用ユーザー一覧、ロールベースのUIフロー、Vercelフロントエンドデプロイ、Renderバックエンド連携、GitHub Actions CIチェックをサポートしています。
 
-## Getting Started / ローカル起動
+# Portfolio Ready v1/ポートフォリオ準備完了 v1
 
+| Area | Status |
+| --- | --- |
+| Frontend UI | ✅ Complete |
+| Login flow | ✅ Working |
+| JWT token storage | ✅ Working |
+| Protected dashboard | ✅ Working |
+| Admin-only user list | ✅ Working |
+| Vercel frontend deployment | ✅ Live |
+| Render backend link | ✅ Live |
+| GitHub Actions CI | ✅ Passing |
+
+This project is portfolio-ready as a deployed React + TypeScript authentication dashboard connected to a deployed FastAPI backend with protected routes, admin access, role-based user management, and CI checks.
+
+このプロジェクトは、保護されたルート、管理者アクセス権、ロールベースのユーザー管理、CIチェックを備えた、デプロイ済みのFastAPIバックエンドに接続されたReact + TypeScriptによる認証ダッシュボードとして、ポートフォリオにそのまま掲載できる状態になっています。
+
+# Live Demo  / ライブデモ
+
+Frontend deployed on Vercel:
+[JWT Authentication Dashboard](https://jwt-authentication-dashboard-sepia.vercel.app)
+
+Backend API deployed on Render:
+[Mini User API Swagger Docs](https://mini-user-api.onrender.com/docs)
+
+# Features / 機能 
+
+| English | 日本語 |
+|---|---|
+| User login flow | ユーザーログインフロー |
+| JWT token storage | JWTトークンの保存 |
+| Protected dashboard route | 保護されたダッシュボードルート |
+| Admin-only user list | 管理者専用ユーザー一覧 |
+| Role-based access control | ロールベースアクセス制御 |
+| API integration with deployed backend | デプロイ済みバックエンドとのAPI統合 |
+| Multi-page frontend routing | マルチページフロントエンドルーティング |
+| Responsive UI styling | レスポンシブUIスタイリング |
+| GitHub Actions CI workflow | GitHub Actions CI ワークフロー |
+
+
+# Tech Stack / 技術スタック
+
+| Area / 分野 | Technologies / 技術 |
+|---|---|
+| Frontend/フロントエンド | React, TypeScript, CSS, Vite, React Router |
+| Backend/バックエンドAPI | FastAPI, PostgreSQL, SQLAlchemy, JWT Authentication |
+| Deployment/デプロイ | Vercel, Render |
+| CI/CD | GitHub Actions
+| Tools/ツール | Git, GitHub, VS Code |
+
+## Local Installation / ローカルインストール
 Clone the repository:
 ```bash
 git clone https://github.com/Iris408/jwt-authentication-dashboard
@@ -27,46 +77,6 @@ Start the server:
 npm run dev
 ```
 
----
-
-# Live Demo  / ライブデモ
-
-Frontend deployed on Vercel:
-```text
-https://jwt-authentication-dashboard-sepia.vercel.app
-```
-Backend API deployed on Render:
-```text
-https://mini-user-api.onrender.com/docs
-```
-
----
-
-# Tech Stack / 技術スタック
-
-|---|---|
-| Frontend | React, TypeScript, CSS, Vite, React Router |
-| Backend | FastAPI, PostgreSQL, SQLAlchemy, JWT Authentication |
-| Deployment | Vercel, Render |
-| Tools | Git, GitHub, GitHub Actions, VS Code |
-
----
-
-# Features / 機能 
-
-| English | 日本語 |
-|---|---|
-| User login flow | ユーザーログインフロー |
-| Protected dashboard route | 保護されたダッシュボードルート |
-| Admin-only user lsit | 管理者専用ユーザー一覧 |
-| Role-based access control | ロールベースアクセス制御 |
-| API Integration with deployed backend | デプロイ済みバックエンドとのAPI統合 |
-| Multi-Page frontend routing | マルチページフロントエンドルーティング |
-| Responsive UI Styling | レスポンシブUIスタイリング |
-| GitHub Actions CI Workflow | GitHub Actions CI ワークフロー |
-
----
-
 ## Pages
 
 | Page | Route | Description |
@@ -74,8 +84,6 @@ https://mini-user-api.onrender.com/docs
 | Login | `/` | User login page |
 | Dashboard | `/dashboard` | Protected user profile page |
 | Admin | `/admin` | Admin-only user list |
-
----
 
 ## API Endpoints | APIエンドポイント
 
@@ -90,8 +98,6 @@ https://mini-user-api.onrender.com/docs
 | GET | `/users/{user_id}` | Get one user by ID |
 | PUT | `/users/{user_id}` | Update a user |
 | DELETE | `/users/{user_id}` | Delete a user |
-
----
 
 # Future Improvements/ 今後の改善
 
