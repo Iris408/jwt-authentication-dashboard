@@ -31,9 +31,10 @@ This project is portfolio-ready as a deployed React + TypeScript authentication 
 
 Frontend deployed on Vercel:
 [JWT Authentication Dashboard](https://jwt-authentication-dashboard-sepia.vercel.app)
-
 Backend API deployed on Render:
 [Mini User API Swagger Docs](https://mini-user-api.onrender.com/docs)
+Backend Repo:
+[Mini User API Repo](https://github.com/Iris408/mini-user-api)
 
 ## Features / 機能 
 
@@ -54,11 +55,11 @@ Backend API deployed on Render:
 
 | Area / 分野 | Technologies / 技術 |
 |---|---|
-| Frontend/フロントエンド | React, TypeScript, CSS, Vite, React Router |
-| Backend/バックエンドAPI | FastAPI, PostgreSQL, SQLAlchemy, JWT Authentication |
-| Deployment/デプロイ | Vercel, Render |
-| CI/CD | GitHub Actions
-| Tools/ツール | Git, GitHub, VS Code |
+| Frontend/ フロントエンド | React, TypeScript, CSS, Vite, React Router |
+| Backend/ バックエンドAPI | FastAPI, PostgreSQL, SQLAlchemy, JWT Authentication |
+| Deployment/ デプロイ | Vercel, Render |
+| CI/CD | GitHub Actions |
+| Tools/ ツール | Git, GitHub, VS Code |
 
 ## Local Installation / ローカルインストール
 Clone the repository:
@@ -108,6 +109,6 @@ npm run dev
 | Improved mobile styling | モバイル表示の改善 |
 | User profile editing | ユーザープロフィール編集 |
 | Admin role editing | 管理者ロールの編集 |
-| Loading states and error message | 読み込み状態とエラーメッセージ |
+| Loading states and error messages | 読み込み状態とエラーメッセージ |
 | Dark/light mode support | ダーク・ライトモード対応 |
 | Frontend tests | フロントエンドテスト |
