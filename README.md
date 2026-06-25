@@ -1,10 +1,8 @@
-# JWT Authentication Dashboard
+# JWT Authentication Dashboard / JWT認証ダッシュボード
 
 JWT Authentication Dashboard is a React + TypeScript frontend application connected to a deployed FastAPI backend.
 
 It supports user login, JWT token storage, protected dashboard access, admin-only user listing, role-based UI flows, Vercel frontend deployment, Render backend integration, and GitHub Actions CI checks.
-
-# JWT認証ダッシュボード
 
 JWT認証ダッシュボードは、デプロイ済みのFastAPIバックエンドに接続されたReact + TypeScriptフロントエンドアプリケーションです。
 
@@ -24,18 +22,19 @@ This frontend authentication dashboard is connected to the deployed Mini User AP
 
 ## Live Demo  / ライブデモ
 
-Frontend deployed on Vercel:
+**Frontend deployed on Vercel:**
 [JWT Authentication Dashboard](https://jwt-authentication-dashboard-sepia.vercel.app)
-Backend API deployed on Render:
+---
+**Backend API deployed on Render:**
 [Mini User API Swagger Docs](https://mini-user-api.onrender.com/docs)
-Backend Repo:
+---
+**Backend Repo:**
 [Mini User API Repo](https://github.com/Iris408/mini-user-api)
 
 ### Next Improvements
 - Improve invalid login error messages
 - Add loading states
 - Add clearer unauthorized page
-- Add README screenshots
 - Add frontend test setup later
 
 ## Portfolio Ready v1/ポートフォリオ準備完了 v1
@@ -54,6 +53,12 @@ Backend Repo:
 This project is portfolio-ready as a deployed React + TypeScript authentication dashboard connected to a deployed FastAPI backend with protected routes, admin access, role-based user management, and CI checks.
 
 このプロジェクトは、保護されたルート、管理者アクセス権、ロールベースのユーザー管理、CIチェックを備えた、デプロイ済みのFastAPIバックエンドに接続されたReact + TypeScriptによる認証ダッシュボードとして、ポートフォリオにそのまま掲載できる状態になっています。
+
+## Screenshots
+
+<img src="./login_screenshot.png" width="300"/>
+
+<img src="./dashboard_screenshot.png" width="300"/>
 
 ## Features / 機能 
 
