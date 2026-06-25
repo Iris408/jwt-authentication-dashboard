@@ -22,13 +22,13 @@ This frontend authentication dashboard is connected to the deployed Mini User AP
 
 ## Live Demo  / ライブデモ
 
-**Frontend deployed on Vercel:**
+* Frontend deployed on Vercel:
 [JWT Authentication Dashboard](https://jwt-authentication-dashboard-sepia.vercel.app)
----
-**Backend API deployed on Render:**
+
+* Backend API deployed on Render:
 [Mini User API Swagger Docs](https://mini-user-api.onrender.com/docs)
----
-**Backend Repo:**
+
+* Backend Repo:
 [Mini User API Repo](https://github.com/Iris408/mini-user-api)
 
 ### Next Improvements
