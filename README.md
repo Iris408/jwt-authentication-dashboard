@@ -1,3 +1,5 @@
+![Docker CI](https://github.com/Iris408/jwt-authentication-dashboard/actions/workflows/docker-ci.yml/badge.svg)
+
 # JWT Authentication Dashboard / JWT認証ダッシュボード
 
 JWT Authentication Dashboard is a React + TypeScript frontend application connected to a deployed FastAPI backend.
