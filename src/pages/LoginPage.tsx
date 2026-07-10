@@ -11,24 +11,27 @@ function LoginPage() {
   async function loginUser(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const API_URL = (import.meta.env.VITE_API_URL || "https://mini-user-api.onrender.com").replace(/\/+$/, "");
+    const API_URL = (
+      import.meta.env.VITE_API_URL || "https://mini-user-api.onrender.com"
+    ).replace(/\/+$/, "");
 
     try {
+      setErrorMessage("");
+
       const response = await fetch(`${API_URL}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          username: username,
-          password: password,
+          username,
+          password,
         }),
       });
 
       const data = await response.json();
 
       console.log("Login response:", data);
-      console.log("Access token:", data.access_token);
 
       if (!response.ok) {
         setErrorMessage(data.detail || "Login failed");
@@ -41,9 +44,6 @@ function LoginPage() {
       }
 
       localStorage.setItem("token", data.access_token);
-
-      console.log("Saved token:", localStorage.getItem("token"));
-
       navigate("/dashboard");
     } catch (error) {
       console.error("Backend API connection failed:", error);
@@ -52,30 +52,96 @@ function LoginPage() {
   }
 
   return (
-    <div className="login-page">
-      <div className="login-container">
-        <h1>Login</h1>
+    <div className="auth-page">
+      <section className="auth-hero">
+        <div className="auth-badge">JWT Auth Portfolio Project</div>
 
-        <form onSubmit={loginUser}>
-          <input
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(event) => setUsername(event.target.value)}
-          />
+        <h1>JWT Authentication Dashboard</h1>
 
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-          />
+        <p className="auth-subtitle">
+          A React and TypeScript authentication dashboard connected to a
+          deployed FastAPI backend with protected routes and admin-only access.
+        </p>
 
-          <button type="submit">Login</button>
-        </form>
+        <div className="auth-feature-grid">
+          <div className="auth-feature-card">
+            <span>01</span>
+            <h3>JWT Login</h3>
+            <p>Authenticate users and store access tokens securely in local storage.</p>
+          </div>
 
-        {errorMessage && <p>{errorMessage}</p>}
-      </div>
+          <div className="auth-feature-card">
+            <span>02</span>
+            <h3>Protected Routes</h3>
+            <p>Block dashboard and admin access unless a valid token exists.</p>
+          </div>
+
+          <div className="auth-feature-card">
+            <span>03</span>
+            <h3>Admin Access</h3>
+            <p>Load admin-only user data through authenticated API requests.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="auth-card-section">
+        <div className="auth-card">
+          <div className="auth-card-header">
+            <div className="auth-logo">JWT</div>
+
+            <div>
+              <h2>Sign in</h2>
+              <p>Use your demo credentials to access the dashboard.</p>
+            </div>
+          </div>
+
+          {errorMessage && (
+            <div className="auth-error">
+              {errorMessage}
+            </div>
+          )}
+
+          <form onSubmit={loginUser} className="auth-form">
+            <label>
+              Username
+              <input
+                type="text"
+                placeholder="Enter username"
+                value={username}
+                onChange={(event) => setUsername(event.target.value)}
+              />
+            </label>
+
+            <label>
+              Password
+              <input
+                type="password"
+                placeholder="Enter password"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+              />
+            </label>
+
+            <button type="submit" className="auth-submit-button">
+              Login to Dashboard
+            </button>
+          </form>
+
+          <div className="auth-demo-box">
+            <p className="auth-demo-title">Demo account</p>
+            <p>
+              Username: <strong>adminuser</strong>
+            </p>
+            <p>
+              Password: <strong>Password123</strong>
+            </p>
+          </div>
+
+          <p className="auth-backend-note">
+            Connected to Mini User API on Render.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
