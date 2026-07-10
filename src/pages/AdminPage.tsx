@@ -13,24 +13,35 @@ function AdminPage() {
 
   async function getUsers() {
     const token = localStorage.getItem("token");
-    const API_URL = import.meta.env.VITE_API_URL;
+    const API_URL = (import.meta.env.VITE_API_URL || "https://mini-user-api.onrender.com").replace(/\/+$/, "");
 
-    const response = await fetch(`${API_URL}/users`, {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      alert(data.detail || "Unable to load users");
+    if (!token) {
+      alert("No token found. Please log in again.");
+      window.location.href = "/";
       return;
-    }
+    }  
 
-    setUsers(data.users || []);
-  }
+    try {
+      const response = await fetch(`${API_URL}/users`, {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        alert(data.detail || "Unable to load users");
+        return;
+      }
+
+      setUsers(Array.isArray(data) ? data : data.users || []);
+    } catch (error) {
+      console.error("Admin users request failed:", error);
+      alert("Unable to connect to backend API");
+    }
+  }  
 
   function logoutUser() {
     localStorage.removeItem("token");
