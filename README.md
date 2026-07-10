@@ -1,45 +1,40 @@
 ![Docker CI](https://github.com/Iris408/jwt-authentication-dashboard/actions/workflows/docker-ci.yml/badge.svg)
+![Frontend CI](https://github.com/Iris408/jwt-authentication-dashboard/actions/workflows/frontend-ci.yml/badge.svg)
 
 # JWT Authentication Dashboard / JWT認証ダッシュボード
 
-JWT Authentication Dashboard is a React + TypeScript frontend application connected to a deployed FastAPI backend.
+JWT Authentication Dashboard is a React + TypeScript frontend authentication application connected to a deployed FastAPI backend.
 
-It supports user login, JWT token storage, protected dashboard access, admin-only user listing, role-based UI flows, Vercel frontend deployment, Render backend integration, and GitHub Actions CI checks.
+It demonstrates a complete frontend JWT authentication flow, including user login, JWT token storage, protected dashboard access, admin-only user listing, role-based UI behaviour, Vercel deployment, Render backend integration, and GitHub Actions CI checks.
 
-JWT認証ダッシュボードは、デプロイ済みのFastAPIバックエンドに接続されたReact + TypeScriptフロントエンドアプリケーションです。
+JWT認証ダッシュボードは、デプロイ済みのFastAPIバックエンドに接続されたReact + TypeScriptフロントエンド認証アプリケーションです。
 
-ユーザーログイン、JWTトークンの保存、保護されたダッシュボードアクセス、管理者専用ユーザー一覧、ロールベースのUIフロー、Vercelフロントエンドデプロイ、Renderバックエンド連携、GitHub Actions CIチェックをサポートしています。
+ユーザーログイン、JWTトークン保存、保護されたダッシュボードアクセス、管理者専用ユーザー一覧、ロールベースUI、Vercelデプロイ、Renderバックエンド連携、GitHub Actions CIチェックを含む、実用的なJWT認証フローを示しています。
 
-## Current Status
+---
 
-This frontend authentication dashboard is connected to the deployed Mini User API backend.
+## Live Demo / ライブデモ
 
-### Completed
-- Login form working
-- JWT token received from backend
-- Dashboard displays authenticated user details
-- Admin page available for admin users
-- Protected route behaviour added
-- Frontend connected to deployed Render backend
+- Frontend deployed on Vercel:  
+  [JWT Authentication Dashboard](https://jwt-authentication-dashboard-sepia.vercel.app)
 
-## Live Demo  / ライブデモ
+- Backend API deployed on Render:  
+  [Mini User API Swagger Docs](https://mini-user-api.onrender.com/docs)
 
-* Frontend deployed on Vercel:
-[JWT Authentication Dashboard](https://jwt-authentication-dashboard-sepia.vercel.app)
+- Backend repository:  
+  [Mini User API Repo](https://github.com/Iris408/mini-user-api)
 
-* Backend API deployed on Render:
-[Mini User API Swagger Docs](https://mini-user-api.onrender.com/docs)
+---
 
-* Backend Repo:
-[Mini User API Repo](https://github.com/Iris408/mini-user-api)
+## Portfolio Status / ポートフォリオ状況
 
-### Next Improvements
-- Improve invalid login error messages
-- Add loading states
-- Add clearer unauthorized page
-- Add frontend test setup later
+This project is portfolio-ready as a deployed React + TypeScript authentication dashboard connected to a deployed FastAPI backend.
 
-## Portfolio Ready v1/ポートフォリオ準備完了 v1
+It includes a polished login page, protected dashboard, admin panel, authenticated API requests, role-based access behaviour, and CI checks.
+
+このプロジェクトは、デプロイ済みのFastAPIバックエンドに接続されたReact + TypeScript認証ダッシュボードとして、ポートフォリオ掲載可能な状態です。
+
+ログインページ、保護されたダッシュボード、管理者パネル、認証付きAPIリクエスト、ロールベースアクセス、CIチェックを含んでいます。
 
 | Area | Status |
 | --- | --- |
@@ -48,21 +43,30 @@ This frontend authentication dashboard is connected to the deployed Mini User AP
 | JWT token storage | ✅ Working |
 | Protected dashboard | ✅ Working |
 | Admin-only user list | ✅ Working |
+| Loading and error states | ✅ Added |
 | Vercel frontend deployment | ✅ Live |
-| Render backend link | ✅ Live |
+| Render backend integration | ✅ Live |
 | GitHub Actions CI | ✅ Passing |
 
-This project is portfolio-ready as a deployed React + TypeScript authentication dashboard connected to a deployed FastAPI backend with protected routes, admin access, role-based user management, and CI checks.
-
-このプロジェクトは、保護されたルート、管理者アクセス権、ロールベースのユーザー管理、CIチェックを備えた、デプロイ済みのFastAPIバックエンドに接続されたReact + TypeScriptによる認証ダッシュボードとして、ポートフォリオにそのまま掲載できる状態になっています。
+---
 
 ## Screenshots
 
-<img src="./login_screenshot.png" width="300"/>
+### Login Page
 
-<img src="./dashboard_screenshot.png" width="300"/>
+<img src="./screenshots/01-login-page.png" width="700"/>
 
-## Features / 機能 
+### Protected Dashboard
+
+<img src="./screenshots/02-dashboard-page.png" width="700"/>
+
+### Admin Panel
+
+<img src="./screenshots/03-admin-page.png" width="700"/>
+
+---
+
+## Features / 機能
 
 | English | 日本語 |
 |---|---|
@@ -70,58 +74,96 @@ This project is portfolio-ready as a deployed React + TypeScript authentication 
 | JWT token storage | JWTトークンの保存 |
 | Protected dashboard route | 保護されたダッシュボードルート |
 | Admin-only user list | 管理者専用ユーザー一覧 |
-| Role-based access control | ロールベースアクセス制御 |
+| Role-based access behaviour | ロールベースアクセス制御 |
+| Authenticated API requests | 認証付きAPIリクエスト |
 | API integration with deployed backend | デプロイ済みバックエンドとのAPI統合 |
 | Multi-page frontend routing | マルチページフロントエンドルーティング |
+| Loading and error handling | 読み込み状態とエラー処理 |
 | Responsive UI styling | レスポンシブUIスタイリング |
 | GitHub Actions CI workflow | GitHub Actions CI ワークフロー |
 
+---
 
 ## Tech Stack / 技術スタック
 
 | Area / 分野 | Technologies / 技術 |
 |---|---|
-| Frontend/ フロントエンド | React, TypeScript, CSS, Vite, React Router |
-| Backend/ バックエンドAPI | FastAPI, PostgreSQL, SQLAlchemy, JWT Authentication |
-| Deployment/ デプロイ | Vercel, Render |
+| Frontend / フロントエンド | React, TypeScript, CSS, Vite, React Router |
+| Backend API / バックエンドAPI | FastAPI, PostgreSQL, SQLAlchemy, JWT Authentication |
+| Deployment / デプロイ | Vercel, Render |
 | CI/CD | GitHub Actions |
-| Tools/ ツール | Git, GitHub, VS Code |
+| Tools / ツール | Git, GitHub, VS Code |
 
-## Local Installation / ローカルインストール
-Clone the repository:
-```bash
-git clone https://github.com/Iris408/jwt-authentication-dashboard
-cd jwt-authentication-dashboard
-npm install
+---
+
+## Project Architecture / 構成
+
+```text
+jwt-authentication-dashboard
+│
+├── src
+│   ├── components
+│   │   └── NavBar.tsx
+│   │
+│   ├── pages
+│   │   ├── LoginPage.tsx
+│   │   ├── DashboardPage.tsx
+│   │   └── AdminPage.tsx
+│   │
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── styles.css
+│
+├── screenshots
+│   ├── 01-login-page.png
+│   ├── 02-dashboard-page.png
+│   └── 03-admin-page.png
+│
+├── .github
+│   └── workflows
+│
+├── package.json
+├── vite.config.ts
+└── README.md
 ```
-Create a `.env` file in the project root:
-```bash
-VITE_API_URL=https://mini-user-api.onrender.com
-```
 
-Start the server:
-```bash
-npm run dev
-```
+---
 
-## Auth Flow
+## Auth Flow / 認証フロー
 
-1. User enters login details.
-2. The frontend sends the login request to the Mini User API backend.
-3. The backend returns a JWT access token.
-4. The frontend stores the token.
-5. Protected pages use the token to request user/admin data.
-6. Admin-only views are restricted based on the user's role.
+1. User enters login credentials.
+2. The frontend sends a login request to the Mini User API backend.
+3. The backend verifies the user and returns a JWT access token.
+4. The frontend stores the token in local storage.
+5. Protected pages send the token in the `Authorization` header.
+6. The dashboard loads the authenticated user profile.
+7. The admin page loads user data only when the authenticated user has an admin role.
 
-## Pages
+日本語:
+
+1. ユーザーがログイン情報を入力します。
+2. フロントエンドがMini User APIバックエンドへログインリクエストを送信します。
+3. バックエンドがユーザーを認証し、JWTアクセストークンを返します。
+4. フロントエンドがトークンをローカルストレージに保存します。
+5. 保護されたページでは、`Authorization` ヘッダーにトークンを付けてリクエストします。
+6. ダッシュボードが認証済みユーザー情報を取得します。
+7. 管理者ページは、管理者ロールを持つユーザーのみユーザー一覧を取得できます。
+
+---
+
+## Pages / ページ
 
 | Page | Route | Description |
 |---|---|---|
 | Login | `/` | User login page |
-| Dashboard | `/dashboard` | Protected user profile page |
-| Admin | `/admin` | Admin-only user list |
+| Dashboard | `/dashboard` | Protected authenticated user dashboard |
+| Admin | `/admin` | Admin-only user list and account overview |
 
-## API Endpoints | APIエンドポイント
+---
+
+## API Endpoints / APIエンドポイント
+
+This frontend connects to the deployed Mini User API backend.
 
 | Method | Endpoint | Description |
 |---|---|---|
@@ -135,15 +177,116 @@ npm run dev
 | PUT | `/users/{user_id}` | Update a user |
 | DELETE | `/users/{user_id}` | Delete a user |
 
-# Future Improvements/ 今後の改善
+---
+
+## Local Installation / ローカルインストール
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Iris408/jwt-authentication-dashboard
+cd jwt-authentication-dashboard
+npm install
+```
+
+Create a `.env` file in the project root:
+
+```bash
+VITE_API_URL=https://mini-user-api.onrender.com
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+For local testing on a specific port:
+
+```bash
+npm run dev -- --host 0.0.0.0 --port 5175
+```
+
+---
+
+## Build Check / ビルド確認
+
+Run:
+
+```bash
+npm run build
+```
+
+This verifies that the TypeScript and Vite frontend build successfully.
+
+---
+
+## Demo Account / デモアカウント
+
+Use the demo account shown on the login page.
+
+```e
+Username: testuser
+Password: password123
+```
+
+Note: the backend must contain an admin user for the admin panel to load protected user data correctly.
+
+---
+
+## Recent Improvements / 最近の改善
 
 | English | 日本語 |
 |---|---|
-| CI/CD deployment improvements | CI/CDデプロイ改善 |
+| Refreshed login page UI | ログインページUIを改善 |
+| Added modern protected dashboard layout | 保護ダッシュボードのレイアウトを改善 |
+| Added admin panel statistics | 管理者パネルに統計カードを追加 |
+| Added user account cards | ユーザーアカウントカードを追加 |
+| Improved API URL handling | API URL処理を改善 |
+| Added loading states | 読み込み状態を追加 |
+| Added error handling | エラー処理を追加 |
+| Fixed admin users API integration | 管理者ユーザーAPI連携を修正 |
+| Improved Mini User API role checking | Mini User APIのロール確認を改善 |
+
+---
+
+## Future Improvements / 今後の改善
+
+| English | 日本語 |
+|---|---|
 | Refresh token support | リフレッシュトークン対応 |
-| Improved mobile styling | モバイル表示の改善 |
+| Dedicated unauthorized page | 専用の未認可ページ |
 | User profile editing | ユーザープロフィール編集 |
-| Admin role editing | 管理者ロールの編集 |
-| Loading states and error messages | 読み込み状態とエラーメッセージ |
+| Admin role editing | 管理者ロール編集 |
+| Frontend test setup | フロントエンドテスト追加 |
 | Dark/light mode support | ダーク・ライトモード対応 |
-| Frontend tests | フロントエンドテスト |
+| Stronger production auth handling | 本番環境向け認証処理の強化 |
+| Improved mobile screenshots | モバイルスクリーンショット改善 |
+
+---
+
+## Related Project / 関連プロジェクト
+
+This frontend is connected to the Mini User API backend.
+
+Mini User API includes:
+
+- FastAPI backend
+- PostgreSQL database
+- SQLAlchemy ORM
+- JWT authentication
+- Role-based access control
+- Protected profile route
+- Admin-only users route
+- Render deployment
+
+Backend repository:  
+[Mini User API](https://github.com/Iris408/mini-user-api)
+
+---
+
+## Learning Purpose / 学習目的
+
+This project was built to practise frontend authentication, protected routing, backend API integration, role-based UI logic, deployment, and portfolio-ready project presentation.
+
+このプロジェクトは、フロントエンド認証、保護されたルーティング、バックエンドAPI連携、ロールベースUIロジック、デプロイ、ポートフォリオ向けプロジェクト整理を練習するために作成しました。
