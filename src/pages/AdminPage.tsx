@@ -61,10 +61,7 @@ function AdminPage() {
 
     if (!token) {
       window.location.href = "/";
-      return;
     }
-
-    getUsers();
   }, []);
 
   const adminUsers = users.filter(
