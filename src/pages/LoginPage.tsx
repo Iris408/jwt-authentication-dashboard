@@ -11,7 +11,7 @@ function LoginPage() {
   async function loginUser(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const API_URL = import.meta.env.VITE_API_URL;
+    const API_URL = (import.meta.env.VITE_API_URL || "https://mini-user-api.onrender.com").replace(/\/+$/, "");
 
     try {
       const response = await fetch(`${API_URL}/login`, {
@@ -32,6 +32,11 @@ function LoginPage() {
 
       if (!response.ok) {
         setErrorMessage(data.detail || "Login failed");
+        return;
+      }
+
+      if (!data.access_token) {
+        setErrorMessage("No access token returned from backend");
         return;
       }
 
