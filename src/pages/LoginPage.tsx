@@ -130,10 +130,10 @@ function LoginPage() {
           <div className="auth-demo-box">
             <p className="auth-demo-title">Demo account</p>
             <p>
-              Username: <strong>adminuser</strong>
+              Username: <strong>testuser</strong>
             </p>
             <p>
-              Password: <strong>Password123</strong>
+              Password: <strong>password123</strong>
             </p>
           </div>
 
